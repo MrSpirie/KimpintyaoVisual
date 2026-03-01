@@ -1,0 +1,126 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KimpintyaoVisual | Вход</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <div class="nav-shell">
+      <a href="/" class="brand">KimpintyaoVisual</a>
+      <nav class="nav-links">
+        <a href="/" data-i18n="auth.nav.home">Главная</a>
+        <a href="/#features" data-i18n="auth.nav.features">Преимущества</a>
+        <a href="/#modes" data-i18n="auth.nav.modes">Режимы</a>
+        <a href="/#visual-story" data-i18n="nav.story">Визуальная история</a>
+        <a href="/members">Участники</a>
+        <a href="/news">Новости</a>
+      </nav>
+      <div class="nav-right">
+        <span class="version-badge" id="versionText">v0.1 (Разработка визуала)</span>
+        <label class="lang-switch" for="langSelect">
+          <span data-i18n="lang.label">Язык</span>
+          <select id="langSelect" aria-label="Language">
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+            <option value="uk">UK</option>
+          </select>
+        </label>
+        <a id="navAdminBtn" href="/admin" class="btn btn-outline nav-login-btn" hidden>Админка</a>
+        <a id="navMessagesBtn" href="/messages" class="btn btn-outline nav-login-btn" hidden>Сообщения</a>
+        <a id="navAuthBtn" href="#loginForm" class="btn btn-primary nav-login-btn">Вход</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container auth-container">
+    <section class="hero-card auth-hero reveal">
+      <div class="hero-copy">
+        <p class="kicker">Account Access</p>
+        <h1 data-i18n="auth.hero.title">вход и регистрация</h1>
+        <p class="lead" data-i18n="auth.hero.lead">
+          Создай аккаунт, чтобы получать новости проекта и доступ к новым версиям визуала.
+        </p>
+      </div>
+      <aside class="hero-status">
+        <h2 data-i18n="auth.quick.title">Быстрые действия</h2>
+        <ul>
+          <li><span data-i18n="auth.quick.home">Главная</span><strong>/</strong></li>
+          <li><span data-i18n="auth.quick.features">Преимущества</span><strong>/#features</strong></li>
+          <li><span>Roadmap</span><strong>/#roadmap</strong></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="two-grid">
+        <article class="glass-panel reveal" data-delay="40">
+          <h3 data-i18n="auth.register.title">Регистрация</h3>
+          <form id="registerForm" class="stack-form">
+            <label>
+              <span data-i18n="auth.register.username">Ник</span>
+              <input required name="username" type="text" maxlength="40" placeholder="Например: Kimpintyao" data-i18n-placeholder="auth.register.usernamePlaceholder" />
+            </label>
+            <label>
+              Email
+              <input required name="email" type="email" placeholder="name@example.com" />
+            </label>
+            <label>
+              <span data-i18n="auth.register.password">Пароль</span>
+              <input required name="password" type="password" minlength="6" placeholder="Минимум 6 символов" data-i18n-placeholder="auth.register.passwordPlaceholder" />
+            </label>
+            <button type="submit" class="btn btn-primary btn-wide" data-i18n="auth.register.button">Зарегистрироваться</button>
+          </form>
+        </article>
+
+        <article class="glass-panel reveal" data-delay="90">
+          <h3 data-i18n="auth.loginTitle">Вход</h3>
+          <form id="loginForm" class="stack-form">
+            <label>
+              Email
+              <input required name="email" type="email" placeholder="name@example.com" />
+            </label>
+            <label>
+              <span data-i18n="auth.loginPasswordLabel">Пароль</span>
+              <input required name="password" type="password" placeholder="Твой пароль" data-i18n-placeholder="auth.loginPasswordPlaceholder" />
+            </label>
+            <button type="submit" class="btn btn-primary btn-wide" data-i18n="auth.loginButton">Войти</button>
+          </form>
+        </article>
+      </div>
+
+      <div id="profilePanel" class="glass-panel profile-panel" hidden>
+        <h3 data-i18n="auth.profile.title">Текущий аккаунт</h3>
+        <div class="profile-grid">
+          <p><span data-i18n="auth.profile.username">Ник:</span> <strong id="profileName">-</strong></p>
+          <p><span>Email:</span> <strong id="profileEmail">-</strong></p>
+          <p><span data-i18n="auth.profile.role">Роль:</span> <strong id="profileRole">-</strong></p>
+          <p><span>ID:</span> <strong id="profileId">-</strong></p>
+        </div>
+        <div class="hero-actions">
+          <a href="/" class="btn btn-outline" data-i18n="auth.profile.home">На главную</a>
+          <button id="logoutBtn" type="button" class="btn btn-outline" data-i18n="auth.profile.logout">Выйти</button>
+        </div>
+      </div>
+    </section>
+
+    <p id="statusLine" class="status-line" data-i18n="auth.status.ready">Вкладка аккаунта готова.</p>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="auth.footer.copy">KimpintyaoVisual • Account Access • 2026</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+
