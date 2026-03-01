@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KimpintyaoVisual | Профиль</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="side-social side-social-left" aria-label="Ссылки на соцсети">
+    <a class="side-social-link side-social-visual" href="https://t.me/kimpintyaoclient" target="_blank" rel="noopener noreferrer" aria-label="Телеграм канал визуала">
+      <span class="side-social-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M21.37 3.18L2.06 10.59C0.74 11.12 0.75 11.85 1.82 12.18L6.77 13.72L18.22 6.49C18.76 6.15 19.25 6.33 18.85 6.69L9.57 15.06L9.22 20.19C9.74 20.19 9.97 19.95 10.26 19.66L12.66 17.33L17.67 21.03C18.59 21.54 19.24 21.28 19.49 20.18L22.78 4.53C23.15 3.18 22.2 2.57 21.37 3.18Z" />
+        </svg>
+      </span>
+      <span class="side-social-name">Канал визуала</span>
+    </a>
+    <a class="side-social-link side-social-creator" href="https://t.me/yanespirie" target="_blank" rel="noopener noreferrer" aria-label="Телеграм канал создателя">
+      <span class="side-social-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M21.37 3.18L2.06 10.59C0.74 11.12 0.75 11.85 1.82 12.18L6.77 13.72L18.22 6.49C18.76 6.15 19.25 6.33 18.85 6.69L9.57 15.06L9.22 20.19C9.74 20.19 9.97 19.95 10.26 19.66L12.66 17.33L17.67 21.03C18.59 21.54 19.24 21.28 19.49 20.18L22.78 4.53C23.15 3.18 22.2 2.57 21.37 3.18Z" />
+        </svg>
+      </span>
+      <span class="side-social-name">Канал создателя</span>
+    </a>
+  </div>
+  <div class="side-social side-social-right" aria-label="Ссылки на соцсети">
+    <a class="side-social-link side-social-copy" href="https://t.me/foxusworld" target="_blank" rel="noopener noreferrer" aria-label="Телеграм канал FoxusWorld">
+      <span class="side-social-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M21.37 3.18L2.06 10.59C0.74 11.12 0.75 11.85 1.82 12.18L6.77 13.72L18.22 6.49C18.76 6.15 19.25 6.33 18.85 6.69L9.57 15.06L9.22 20.19C9.74 20.19 9.97 19.95 10.26 19.66L12.66 17.33L17.67 21.03C18.59 21.54 19.24 21.28 19.49 20.18L22.78 4.53C23.15 3.18 22.2 2.57 21.37 3.18Z" />
+        </svg>
+      </span>
+      <span class="side-social-name">FoxusWorld</span>
+    </a>
+  </div>
+
+  <header class="navbar">
+    <div class="nav-shell">
+      <a href="/" class="brand">KimpintyaoVisual</a>
+      <nav class="nav-links">
+        <a href="/" data-i18n="auth.nav.home">Главная</a>
+        <a href="/#features" data-i18n="auth.nav.features">Преимущества</a>
+        <a href="/#modes" data-i18n="auth.nav.modes">Режимы</a>
+        <a href="/#visual-story" data-i18n="nav.story">Визуальная история</a>
+        <a href="/members">Участники</a>
+        <a href="/news">Новости</a>
+      </nav>
+      <div class="nav-right">
+        <span class="version-badge" id="versionText">v0.1 (Разработка визуала)</span>
+        <label class="lang-switch" for="langSelect">
+          <span data-i18n="lang.label">Язык</span>
+          <select id="langSelect" aria-label="Language">
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+            <option value="uk">UK</option>
+          </select>
+        </label>
+        <a id="navAdminBtn" href="/admin" class="btn btn-outline nav-login-btn" hidden>Админка</a>
+        <a id="navMessagesBtn" href="/messages" class="btn btn-outline nav-login-btn" hidden>Сообщения</a>
+        <a id="navAuthBtn" href="/profile" class="btn btn-primary nav-login-btn">Профиль</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="profilePageRoot" class="container auth-container">
+    <section class="profile-showcase reveal">
+      <div class="profile-showcase-main">
+        <div class="profile-avatar" id="profilePageAvatar">?</div>
+        <div class="profile-showcase-meta">
+          <p class="kicker" id="profilePageKicker">Profile Area</p>
+          <h1 id="profilePageDisplayName">профиль</h1>
+          <div class="profile-head-line">
+            <span id="profilePageUsername">@-</span>
+            <span class="profile-role-pill role-user" id="profilePageRolePill">User</span>
+            <span class="profile-presence" id="profilePagePresence">offline</span>
+          </div>
+          <p class="lead profile-lead" id="profilePageBio">Описание профиля пока не добавлено.</p>
+        </div>
+      </div>
+
+      <aside class="profile-showcase-side">
+        <ul>
+          <li><span>ID</span><strong id="profilePageId">-</strong></li>
+          <li><span>Email</span><strong id="profilePageEmail">-</strong></li>
+          <li><span>Регистрация</span><strong id="profilePageCreatedAt">-</strong></li>
+          <li><span>Активность</span><strong id="profilePageLastActive">-</strong></li>
+        </ul>
+      </aside>
+
+      <div class="profile-stats-grid">
+        <article class="profile-stat-card">
+          <span>Роль</span>
+          <strong id="profilePageRole">-</strong>
+        </article>
+        <article class="profile-stat-card">
+          <span>Комментариев</span>
+          <strong id="profileStatComments">0</strong>
+        </article>
+        <article class="profile-stat-card">
+          <span>Дней на сайте</span>
+          <strong id="profileStatDays">0</strong>
+        </article>
+        <article class="profile-stat-card">
+          <span>Активность</span>
+          <strong id="profileStatActivity">0</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="glass-panel reveal" data-delay="20">
+        <h3>Профили пользователей</h3>
+        <form id="profileLookupForm" class="stack-form profile-lookup-form">
+          <label>
+            Username
+            <input id="profileLookupInput" name="username" type="text" maxlength="24" placeholder="Например: spirie" />
+          </label>
+          <button type="submit" class="btn btn-outline btn-wide">Открыть профиль</button>
+        </form>
+        <div id="publicUsersGrid" class="public-users-grid"></div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="two-grid">
+        <article class="glass-panel reveal" data-delay="40" id="profileEditCard">
+          <h3>Редактирование профиля</h3>
+          <form id="profileEditForm" class="stack-form profile-edit-form">
+            <label>
+              Username
+              <input id="profileEditUsername" name="username" type="text" minlength="2" maxlength="24" required />
+            </label>
+            <label>
+              Ник
+              <input id="profileEditNickname" name="nickname" type="text" minlength="2" maxlength="40" required />
+            </label>
+            <label>
+              Имя
+              <input id="profileEditFullName" name="fullName" type="text" maxlength="80" />
+            </label>
+            <label>
+              О себе
+              <textarea id="profileEditBio" name="bio" rows="4" maxlength="300" placeholder="Короткое описание"></textarea>
+            </label>
+            <label>
+              Аватар (jpg, png, webp, gif)
+              <input id="profileAvatarFileInput" name="avatarFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+            </label>
+            <label class="inline-check">
+              <input id="profileAvatarRemove" name="avatarRemove" type="checkbox" />
+              <span>Удалить текущую аватарку</span>
+            </label>
+            <label class="inline-check">
+              <input id="profileEditShowEmail" name="showEmail" type="checkbox" />
+              <span>Показывать email в профиле</span>
+            </label>
+            <label class="inline-check">
+              <input id="profileEditPrivate" name="profilePrivate" type="checkbox" />
+              <span>Сделать профиль приватным (видна только роль)</span>
+            </label>
+            <label>
+              Цветовая тема сайта
+              <select id="profileEditTheme" name="themePreset">
+                <option value="violet">Violet (Default)</option>
+                <option value="ocean">Ocean</option>
+                <option value="emerald">Emerald</option>
+                <option value="sunset">Sunset</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary btn-wide">Сохранить профиль</button>
+          </form>
+        </article>
+
+        <article class="glass-panel reveal" data-delay="90" id="profileCommentsCard">
+          <h3>Комментарии</h3>
+          <form id="profileCommentForm" class="stack-form">
+            <label>
+              Добавить комментарий
+              <input id="profileCommentInput" name="text" type="text" maxlength="240" placeholder="Напиши комментарий" required />
+            </label>
+            <button type="submit" class="btn btn-outline btn-wide">Опубликовать</button>
+          </form>
+          <ul id="profileCommentList" class="profile-comments-list"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="glass-panel reveal" data-delay="120" id="profileCollectionsCard">
+        <h3>Коллекции</h3>
+        <div id="profileCollections" class="profile-collections"></div>
+      </article>
+    </section>
+
+    <section class="section reveal" data-delay="140">
+      <p id="profileViewHint" class="muted profile-view-hint"></p>
+      <div class="hero-actions">
+        <a href="/" class="btn btn-outline">На главную</a>
+        <a id="profileBackToSelfBtn" href="/profile" class="btn btn-outline" hidden>Мой профиль</a>
+        <button id="profileLogoutBtn" type="button" class="btn btn-outline">Выйти из аккаунта</button>
+      </div>
+    </section>
+
+    <p id="statusLine" class="status-line">Профиль загружен.</p>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="auth.footer.copy">KimpintyaoVisual • Account Access • 2026</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
