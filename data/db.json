@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "stepaneartem47@gmail.com",
+      "username": "spirie",
+      "nickname": "spirie",
+      "full_name": "",
+      "bio": "",
+      "avatar_data_url": "",
+      "password_hash": "$2a$12$AFEInRZGM8adwL91Dk/67eQ2uUQR1S095go/LtT90EYXfRHhQbjFC",
+      "role": "user",
+      "comments": [],
+      "created_at": "2026-02-28T11:17:59.514Z"
+    },
+    {
+      "id": 2,
+      "email": "sgesdksajdsakd@gmail.com",
+      "username": "spirie1",
+      "nickname": "spirie1",
+      "full_name": "",
+      "bio": "",
+      "avatar_data_url": "",
+      "password_hash": "$2a$12$ilIGhJ7AZZxIeukfX0ygdOv6NgqL58UaGfX6gWDWYxdJEEc8.t5RS",
+      "role": "user",
+      "comments": [],
+      "created_at": "2026-02-28T12:57:57.832Z"
+    }
+  ],
+  "password_reset_tokens": [],
+  "counters": {
+    "user": 2,
+    "comment": 0
+  }
+}
